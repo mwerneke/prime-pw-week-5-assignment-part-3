@@ -31,5 +31,27 @@ for(i in collection){
 }
 //showCollection completed
 }
-
 showCollection();
+//
+
+let matchList = [];
+
+
+function findByArtist(artist){
+  console.log('In the findByArtist functon:', artist);
+  let artistName ={
+    artist:artist
+}
+  for( i in collection){
+    if( artist === collection[i].artist){
+      matchList.push(artistName);
+      }
+
+    }
+}
+findByArtist('Sam Hunt'); //Added to MatchList Array
+  console.log(matchList);
+findByArtist('Metallica'); //Added to MatchList Array
+  console.log( matchList);
+findByArtist('Aztec');  // Not a Match
+  console.log(matchList);
