@@ -50,8 +50,8 @@ function findByArtist(artist){
     }
 }
 findByArtist('Sam Hunt'); //Added to MatchList Array
-  console.log(matchList);
+  console.log('In the matchList array',matchList);
 findByArtist('Metallica'); //Added to MatchList Array
-  console.log( matchList);
+  console.log('In the matchList array', matchList);
 findByArtist('Aztec');  // Not a Match
-  console.log(matchList);
+  console.log('In the matchList array',matchList);
