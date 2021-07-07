@@ -15,14 +15,21 @@ function addToCollection( artist, title, yearPublished){
 }// end of addToCollection
 
 addToCollection('Sam Hunt', 'Southside', 2020);
-  console.log( collection);
 addToCollection('Metallica', 'Reload', 1997);
-  console.log( collection);
 addToCollection('Halsey', 'Manic', 2020);
-  console.log( collection);
 addToCollection('Bruno Mars','Unorthodox', 2020);
-  console.log( collection);
 addToCollection( 'Michael Jackson','Thriller', 1991 );
-  console.log( collection);
 addToCollection( 'Rhianna', 'Loud', 2010);
   console.log( collection);
+// added artist,title,yearPublished
+
+function showCollection(i){
+  console.log('In the showCollection Function:', collection[i]);
+  console.log('Total items in array', collection.length);
+for(i in collection){
+  console.log( 'Title:',collection[i].title, 'By:', collection[i].artist, 'Published:', collection[i].yearPublished);
+}
+//showCollection completed
+}
+
+showCollection();
