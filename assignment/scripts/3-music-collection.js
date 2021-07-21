@@ -9,6 +9,7 @@ function addToCollection( artist, title, yearPublished){
       title: title,
       yearPublished: yearPublished,
     }
+    
   console.log(newAlbum);
   collection.push( newAlbum);
 
@@ -20,14 +21,14 @@ addToCollection('Halsey', 'Manic', 2020);
 addToCollection('Bruno Mars','Unorthodox', 2020);
 addToCollection( 'Michael Jackson','Thriller', 1991 );
 addToCollection( 'Rhianna', 'Loud', 2010);
-  console.log( collection);
+//console.log( collection);
 // added artist,title,yearPublished
 
-function showCollection(i){
-  console.log('In the showCollection Function:', collection[i]);
+function showCollection(info){
+  console.log('In the showCollection Function:', collection[info]);
   console.log('Total items in array', collection.length);
-for(i in collection){
-  console.log( 'Title:',collection[i].title, 'By:', collection[i].artist, 'Published:', collection[i].yearPublished);
+for(info in collection){
+  console.log( 'Title:',collection[info].title, 'By:', collection[info].artist, 'Published:', collection[info].yearPublished);
 }
 //showCollection completed
 }
@@ -37,21 +38,23 @@ showCollection();
 let matchList = [];
 
 
-function findByArtist(artist){
-  console.log('In the findByArtist functon:', artist);
-  let artistName ={
-    artist:artist
+function findByTitle(title){
+  console.log('In the findByTitle functon:', title);
+  let titleName ={
+    title:title
 }
   for( i in collection){
-    if( artist === collection[i].artist){
-      matchList.push(artistName);
+    if( title === collection[i].title){
+      matchList.push(titleName);
       }
 
     }
 }
-findByArtist('Sam Hunt'); //Added to MatchList Array
+findByTitle('Reload'); //Added to MatchList Array
   console.log('In the matchList array',matchList);
-findByArtist('Metallica'); //Added to MatchList Array
+findByTitle('Thriller'); //Added to MatchList Array
   console.log('In the matchList array', matchList);
-findByArtist('Aztec');  // Not a Match
+findByTitle('Loud');  // Not a Match
   console.log('In the matchList array',matchList);
+
+//Match list complete
